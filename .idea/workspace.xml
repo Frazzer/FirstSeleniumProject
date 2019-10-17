@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76cff9a4-f31a-434a-82d5-60f7fa0a66c4" name="Default Changelist" comment="" />
+    <list default="true" id="76cff9a4-f31a-434a-82d5-60f7fa0a66c4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/szendzij/FirstSeleniumProject/config/DriverHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/selenium/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/selenium/LoginTest.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +39,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1SK0pVCSK7TbznhqQ4WTBudkMCo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -131,5 +137,16 @@
       <updated>1571297162782</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
