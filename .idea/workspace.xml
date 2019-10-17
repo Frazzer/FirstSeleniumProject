@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76cff9a4-f31a-434a-82d5-60f7fa0a66c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/szendzij/FirstSeleniumProject/config/DriverHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/selenium/ContactUsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/selenium/InitialTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/szendzij/FirstSeleniumProject/config/DriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szendzij/FirstSeleniumProject/config/DriverHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/selenium/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/szendzij/FirstSeleniumProject/config/DriverHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/szendzij/FirstSeleniumProject/config/DriverHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/selenium/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/selenium/LoginTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +43,25 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="1SK0pVCSK7TbznhqQ4WTBudkMCo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jaksze\Documents\GitHub\FirstSeleniumProject\src\test\resources" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -52,38 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LoginTest.asNotRegisteredCustomerIShallNotLogIn">
-    <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FirstSeleniumProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.szendzij.FirstSeleniumProject.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.szendzij.FirstSeleniumProject" />
-      <option name="MAIN_CLASS_NAME" value="com.szendzij.FirstSeleniumProject.CalculatorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatorTest.dupa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FirstSeleniumProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.szendzij.FirstSeleniumProject.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.szendzij.FirstSeleniumProject" />
-      <option name="MAIN_CLASS_NAME" value="com.szendzij.FirstSeleniumProject.CalculatorTest" />
-      <option name="METHOD_NAME" value="dupa" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ContactUsTest.asCustomerIShallSendEmailWithSubjectAndAttachment">
     <configuration name="CalculatorTest.simpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstSeleniumProject" />
       <extension name="coverage">
@@ -95,6 +86,54 @@
       <option name="PACKAGE_NAME" value="com.szendzij.FirstSeleniumProject" />
       <option name="MAIN_CLASS_NAME" value="com.szendzij.FirstSeleniumProject.CalculatorTest" />
       <option name="METHOD_NAME" value="simpleTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactUsTest.asCustomerIShallNotSendEmailWithoutSubject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FirstSeleniumProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.ContactUsTest" />
+      <option name="METHOD_NAME" value="asCustomerIShallNotSendEmailWithoutSubject" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactUsTest.asCustomerIShallSendEmailWithSubjectAndAttachment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FirstSeleniumProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.ContactUsTest" />
+      <option name="METHOD_NAME" value="asCustomerIShallSendEmailWithSubjectAndAttachment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactUsTest.asCustomerIShallSendEmailWithoutSubject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FirstSeleniumProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.ContactUsTest" />
+      <option name="METHOD_NAME" value="asCustomerIShallSendEmailWithoutSubject" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,10 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ContactUsTest.asCustomerIShallSendEmailWithSubjectAndAttachment" />
+        <item itemvalue="JUnit.ContactUsTest.asCustomerIShallSendEmailWithoutSubject" />
+        <item itemvalue="JUnit.ContactUsTest.asCustomerIShallNotSendEmailWithoutSubject" />
         <item itemvalue="JUnit.LoginTest.asNotRegisteredCustomerIShallNotLogIn" />
         <item itemvalue="JUnit.CalculatorTest.simpleTest" />
-        <item itemvalue="JUnit.CalculatorTest" />
-        <item itemvalue="JUnit.CalculatorTest.dupa" />
       </list>
     </recent_temporary>
   </component>
@@ -136,6 +176,21 @@
       <option name="presentableId" value="Default" />
       <updated>1571297162782</updated>
     </task>
+    <task id="LOCAL-00001" summary="preparing driverHelper">
+      <created>1571316076831</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571316076831</updated>
+    </task>
+    <task id="LOCAL-00002" summary="preparing driverHelper">
+      <created>1571316103593</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571316103593</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,5 +203,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="preparing driverHelper" />
+    <option name="LAST_COMMIT_MESSAGE" value="preparing driverHelper" />
   </component>
 </project>

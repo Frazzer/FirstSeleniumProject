@@ -1,36 +1,15 @@
 package selenium;
 
-import com.szendzij.FirstSeleniumProject.config.DriverHelper;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.io.File;
-import java.sql.Driver;
 
 import static org.junit.Assert.assertEquals;
 
-public class LoginTest {
-    WebDriver driver;
-    DriverHelper driverHelper;
-
-    @Before
-    public void setup() {
-        driverHelper = new DriverHelper();
-        this.driver = driverHelper.startDriver("http://automationpractice.com/index.php");
-    }
-
-    @After
-    public void cleanUp() {
-        driverHelper.closeDriver();
-    }
+public class LoginTest extends InitialTest {
 
     @Test
-    public void asNotRegisteredCustomerIShallNotLogIn() throws InterruptedException {
+    public void asNotRegisteredCustomerIShallNotLogIn()  {
         //given
         final String expectedTextOfValidation = "Authentication failed.";
 
