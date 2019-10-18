@@ -1,9 +1,10 @@
 package selenium;
 
+import com.szendzij.FirstSeleniumProject.pages.ContactUsPage;
+import com.szendzij.FirstSeleniumProject.pages.HomePage;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+
 
 import java.io.File;
 
@@ -18,17 +19,13 @@ public class ContactUsTest extends InitialTest {
     @Before
     public void contactMenu() {
 
-        WebElement contactUsMenu = driver.findElement(By.id("contact-link"));
-        contactUsMenu.click();
+        HomePage homePage = new HomePage();
+        ContactUsPage contactUsPage = new ContactUsPage();
 
-        WebElement emialInput = driver.findElement(By.id("email"));
-        emialInput.sendKeys(this.email);
-
-        WebElement orderReferenctInput = driver.findElement(By.id("id_order"));
-        orderReferenctInput.sendKeys(this.orderreference);
-
-        WebElement messageTextArea = driver.findElement(By.id("message"));
-        messageTextArea.sendKeys(this.message);
+        homePage.contactUsMenu.click();
+        contactUsPage.emialInput.sendKeys(this.email);
+        contactUsPage.orderReferenctInput.sendKeys(this.orderreference);
+        contactUsPage.messageTextArea.sendKeys(this.message);
     }
 
 
@@ -36,15 +33,14 @@ public class ContactUsTest extends InitialTest {
     public void asCustomerIShallNotSendEmailWithoutSubject() {
 
         final String expectedTextOfValidation = "Please select a subject from the list provided.";
+        ContactUsPage contactUsPage = new ContactUsPage();
+
 
         //given
 
         //when
-        WebElement submitBtn = driver.findElement(By.id("submitMessage"));
-        submitBtn.click();
-
-        WebElement validationMsg = driver.findElement(By.cssSelector("#center_column > div > ol > li"));
-        String currentTextOfValidation = validationMsg.getText();
+        contactUsPage.submitBtn.click();
+        String currentTextOfValidation = contactUsPage.textOfValidationWhenThereIsNoSubject.getText();
 
         //then
         assertEquals(expectedTextOfValidation, currentTextOfValidation);
@@ -52,20 +48,15 @@ public class ContactUsTest extends InitialTest {
 
     @Test
     public void asCustomerIShallSendEmailWithSubject() {
-
-        final String expectedText = "Your message has been successfully sent to our team.";
-
         //given
-
-        WebElement selectSubject = driver.findElement(By.cssSelector("#id_contact > option:nth-child(2)"));
-        selectSubject.click();
+        final String expectedText = "Your message has been successfully sent to our team.";
+        ContactUsPage contactUsPage = new ContactUsPage();
 
         //when
-        WebElement submitBtn = driver.findElement(By.id("submitMessage"));
-        submitBtn.click();
+        contactUsPage.selectSubject.click();
+        contactUsPage.submitBtn.click();
 
-        WebElement validationMsg = driver.findElement(By.cssSelector("#center_column > p"));
-        String currentText = validationMsg.getText();
+        String currentText = contactUsPage.validationMsg.getText();
 
         //then
         assertEquals(expectedText, currentText);
@@ -73,24 +64,18 @@ public class ContactUsTest extends InitialTest {
 
     @Test
     public void asCustomerIShallSendEmailWithSubjectAndAttachment() {
-
-        final String expectedText = "Your message has been successfully sent to our team.";
-
         //given
 
-        WebElement selectSubject = driver.findElement(By.cssSelector("#id_contact > option:nth-child(2)"));
-        selectSubject.click();
+        final String expectedText = "Your message has been successfully sent to our team.";
+        ContactUsPage contactUsPage = new ContactUsPage();
 
-        WebElement fileUpload = driver.findElement(By.id("fileUpload"));
         String testFile = getClass().getClassLoader().getResource("test.txt").getFile();
-        fileUpload.sendKeys(new File(testFile).getAbsolutePath());
+        contactUsPage.selectSubject.click();
+        contactUsPage.fileUpload.sendKeys(new File(testFile).getAbsolutePath());
 
         //when
-        WebElement submitBtn = driver.findElement(By.id("submitMessage"));
-        submitBtn.click();
-
-        WebElement validationMsg = driver.findElement(By.cssSelector("#center_column > p"));
-        String currentText = validationMsg.getText();
+        contactUsPage.submitBtn.click();
+        String currentText = contactUsPage.validationMsg.getText();
 
         //then
         assertEquals(expectedText, currentText);

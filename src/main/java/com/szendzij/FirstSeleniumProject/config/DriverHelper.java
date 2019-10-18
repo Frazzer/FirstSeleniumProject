@@ -1,9 +1,13 @@
 package com.szendzij.FirstSeleniumProject.config;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 public class DriverHelper {
 
@@ -38,4 +42,7 @@ public class DriverHelper {
         driver.quit();
         driver = null;
     }
+
+//    Wait<WebElement> wait = new FluentWait<WebElement>()
+//            .withTimeout(30, TimeUnit.SECONDS)
 }
