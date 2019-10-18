@@ -43,6 +43,4 @@ public class DriverHelper {
         driver = null;
     }
 
-//    Wait<WebElement> wait = new FluentWait<WebElement>()
-//            .withTimeout(30, TimeUnit.SECONDS)
 }

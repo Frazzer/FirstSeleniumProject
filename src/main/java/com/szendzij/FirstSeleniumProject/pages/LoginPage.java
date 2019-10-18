@@ -8,16 +8,25 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
 
     @FindBy(id = "email")
-    public WebElement emailInp;
+    private WebElement emailInp;
     @FindBy(id = "passwd")
-    public WebElement passwdInp;
+    private WebElement passwdInp;
     @FindBy(id = "SubmitLogin")
-    public WebElement submitLoginBtn;
+    private WebElement submitLoginBtn;
     @FindBy(css = "#center_column > div.alert.alert-danger > ol > li")
-    public WebElement actualTextOfValidation;
+    private WebElement actualTextOfValidation;
 
     public LoginPage() {
         PageFactory.initElements(DriverHelper.getDriver(), this);
     }
+
+    public void enterEmail(String email) { emailInp.sendKeys(email); }
+    public void enterPassword(String password) { passwdInp.sendKeys(password); }
+    public void clickSubmitBtn() { submitLoginBtn.click(); }
+    public String getActualTextOfValidation() {
+        return actualTextOfValidation.getText();
+    }
+
+
 
 }

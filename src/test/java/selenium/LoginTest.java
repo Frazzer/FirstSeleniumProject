@@ -8,24 +8,25 @@ import static org.junit.Assert.assertEquals;
 
 public class LoginTest extends InitialTest {
 
+    private HomePage homePage;
+    private LoginPage loginPage;
+
     @Test
     public void asNotRegisteredCustomerIShallNotLogIn() {
 
-        HomePage homePage = new HomePage();
-        LoginPage loginPage = new LoginPage();
-
         //given
+        homePage = new HomePage();
+        loginPage = new LoginPage();
         final String expectedTextOfValidation = "Authentication failed.";
 
         //when
-        homePage.loginBtn.click();
-        loginPage.emailInp.sendKeys("testowyEmail@test.pl");
-        loginPage.passwdInp.sendKeys("qwertyuiop");
-        loginPage.submitLoginBtn.click();
-        String actualTextOfValidation = loginPage.actualTextOfValidation.getText();
+        homePage.clickSignIn();
+        loginPage.enterEmail("lorem@ipsum.pl");
+        loginPage.enterPassword("password");
+        loginPage.clickSubmitBtn();
 
         //then
-        assertEquals(expectedTextOfValidation, actualTextOfValidation);
+        assertEquals(expectedTextOfValidation, loginPage.getActualTextOfValidation());
     }
 
 }

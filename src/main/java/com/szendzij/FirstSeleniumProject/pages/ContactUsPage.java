@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.File;
+
 public class ContactUsPage {
 
     @FindBy(id = "email")
@@ -24,8 +26,42 @@ public class ContactUsPage {
     @FindBy(id = "fileUpload")
     public WebElement fileUpload;
 
+
     public ContactUsPage() {
         PageFactory.initElements(DriverHelper.getDriver(), this);
+    }
+
+    public void enterEmail(String d) {
+        emialInput.sendKeys(d);
+    }
+
+    public void enterOrderReference(String d) {
+        orderReferenctInput.sendKeys(d);
+    }
+
+    public void enterMessage(String d) {
+        messageTextArea.sendKeys(d);
+    }
+
+    public void clickSubmitBtn() {
+        submitBtn.click();
+    }
+
+    public void clickSubject() {
+        selectSubject.click();
+    }
+
+    public String getTextOfValidationWhenThereIsNoSubject() {
+        return textOfValidationWhenThereIsNoSubject.getText();
+    }
+
+    public String getValidationMsg() {
+        return validationMsg.getText();
+    }
+
+    public void addAttachment() {
+        String testFile = getClass().getClassLoader().getResource("test.txt").getFile();
+        fileUpload.sendKeys(new File(testFile).getAbsolutePath());
     }
 
 

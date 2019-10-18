@@ -5,7 +5,6 @@ import com.szendzij.FirstSeleniumProject.pages.HomePage;
 import org.junit.Before;
 import org.junit.Test;
 
-
 import java.io.File;
 
 import static org.junit.Assert.assertEquals;
@@ -13,71 +12,64 @@ import static org.junit.Assert.assertEquals;
 
 public class ContactUsTest extends InitialTest {
     final String email = "lorem@ipsum.pl";
-    final String orderreference = "lorem";
+    final String orderReference = "lorem";
     final String message = "lorem";
+
+    private HomePage homePage;
+    private ContactUsPage contactUsPage;
+
 
     @Before
     public void contactMenu() {
 
-        HomePage homePage = new HomePage();
-        ContactUsPage contactUsPage = new ContactUsPage();
-
-        homePage.contactUsMenu.click();
-        contactUsPage.emialInput.sendKeys(this.email);
-        contactUsPage.orderReferenctInput.sendKeys(this.orderreference);
-        contactUsPage.messageTextArea.sendKeys(this.message);
+        homePage = new HomePage();
+        contactUsPage = new ContactUsPage();
+        homePage.clickContactUsMenu();
+        contactUsPage.enterEmail(email);
+        contactUsPage.enterOrderReference(orderReference);
+        contactUsPage.enterMessage(message);
     }
 
 
     @Test
     public void asCustomerIShallNotSendEmailWithoutSubject() {
-
-        final String expectedTextOfValidation = "Please select a subject from the list provided.";
-        ContactUsPage contactUsPage = new ContactUsPage();
-
-
         //given
+        final String expectedTextOfValidation = "Please select a subject from the list provided.";
 
         //when
-        contactUsPage.submitBtn.click();
-        String currentTextOfValidation = contactUsPage.textOfValidationWhenThereIsNoSubject.getText();
+        contactUsPage.clickSubmitBtn();
 
         //then
-        assertEquals(expectedTextOfValidation, currentTextOfValidation);
+        assertEquals(expectedTextOfValidation, contactUsPage.getTextOfValidationWhenThereIsNoSubject());
     }
 
     @Test
     public void asCustomerIShallSendEmailWithSubject() {
         //given
         final String expectedText = "Your message has been successfully sent to our team.";
-        ContactUsPage contactUsPage = new ContactUsPage();
 
         //when
-        contactUsPage.selectSubject.click();
-        contactUsPage.submitBtn.click();
+        contactUsPage.clickSubject();
+        contactUsPage.clickSubmitBtn();
 
-        String currentText = contactUsPage.validationMsg.getText();
 
         //then
-        assertEquals(expectedText, currentText);
+        assertEquals(expectedText, contactUsPage.getValidationMsg());
     }
 
     @Test
     public void asCustomerIShallSendEmailWithSubjectAndAttachment() {
         //given
-
         final String expectedText = "Your message has been successfully sent to our team.";
-        ContactUsPage contactUsPage = new ContactUsPage();
-
-        String testFile = getClass().getClassLoader().getResource("test.txt").getFile();
-        contactUsPage.selectSubject.click();
-        contactUsPage.fileUpload.sendKeys(new File(testFile).getAbsolutePath());
-
         //when
-        contactUsPage.submitBtn.click();
-        String currentText = contactUsPage.validationMsg.getText();
+
+        contactUsPage.clickSubject();
+        contactUsPage.addAttachment();
+        contactUsPage.clickSubmitBtn();
 
         //then
-        assertEquals(expectedText, currentText);
+        assertEquals(expectedText, contactUsPage.getValidationMsg());
     }
+
+
 }
