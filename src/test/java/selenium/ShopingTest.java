@@ -22,7 +22,7 @@ public class ShopingTest extends InitialTest {
         homePage = new HomePage();
         shopingPage = new ShopingCartPage();
 
-        homePage.moveToBlouseElement();
+        homePage.moveMouseToBlouseElement();
         homePage.waitForAddToCartBlouseElement();
         homePage.clickAddToCartBlouseElement();
 
@@ -33,5 +33,32 @@ public class ShopingTest extends InitialTest {
         //then
         assertEquals(expectedBlousePrice, shopingPage.getBlousePrice());
         assertEquals(expectedShippingCost, shopingPage.getShippingCosts());
+    }
+
+    @Test
+    public void asCustomerIWantToButTwoCasualDressesAndCheckoutACart() {
+
+        //given
+        homePage = new HomePage();
+        shopingPage = new ShopingCartPage();
+
+        homePage.moveMouseToWomenMenu();
+        homePage.waitForCasualDressesElementMenuItem();
+        homePage.clickOnCasualDressesMenuItem()
+                .moveMouseToDress1()
+                .waitForAddToCartButton()
+                .clickOnAddToCartButtonOnDress()
+                .waitForCancelLayerCardOfProductByClickOnCrossButton()
+                .clickOnCancelLayerCardOfProductCrossButton()
+                .moveMouseToDress2()
+                .waitForAddToCartButton()
+                .clickOnAddToCartButtonOnDress()
+                .waitForCancelLayerCardOfProductByClickOnCrossButton()
+                .clickOnCancelLayerCardOfProductCrossButton();
+
+
+        //When
+
+        //then
     }
 }

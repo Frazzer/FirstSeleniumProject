@@ -1,20 +1,16 @@
 package com.szendzij.FirstSeleniumProject.config;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 
 import java.io.File;
-import java.util.concurrent.TimeUnit;
 
 public class DriverHelper {
 
     private static WebDriver driver;
 
     public static WebDriver getDriver(String... url) {
-        if(driver == null){
+        if (driver == null) {
             if (url.length != 0) {
                 driver = startDriver(url[0]);
             } else {
@@ -42,5 +38,6 @@ public class DriverHelper {
         driver.quit();
         driver = null;
     }
+
 
 }

@@ -20,13 +20,24 @@ public class LoginPage {
         PageFactory.initElements(DriverHelper.getDriver(), this);
     }
 
-    public void enterEmail(String email) { emailInp.sendKeys(email); }
-    public void enterPassword(String password) { passwdInp.sendKeys(password); }
-    public void clickSubmitBtn() { submitLoginBtn.click(); }
+    public LoginPage enterEmail(String email) {
+        emailInp.sendKeys(email);
+        return this;
+    }
+
+    public LoginPage enterPassword(String password) {
+        passwdInp.sendKeys(password);
+        return this;
+    }
+
+    public LoginPage clickSubmitBtn() {
+        submitLoginBtn.click();
+        return this;
+    }
+
     public String getActualTextOfValidation() {
         return actualTextOfValidation.getText();
     }
-
 
 
 }
