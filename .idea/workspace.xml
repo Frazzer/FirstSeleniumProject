@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76cff9a4-f31a-434a-82d5-60f7fa0a66c4" name="Default Changelist" comment="added page object model and create new tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/szendzij/FirstSeleniumProject/pages/ShoppingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szendzij/FirstSeleniumProject/config/DriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szendzij/FirstSeleniumProject/config/DriverHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szendzij/FirstSeleniumProject/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szendzij/FirstSeleniumProject/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szendzij/FirstSeleniumProject/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szendzij/FirstSeleniumProject/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/ShopingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/ShopingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/FirstSeleniumProject.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chromedriver.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/szendzij/FirstSeleniumProject/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/szendzij/FirstSeleniumProject/config/DriverHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/szendzij/FirstSeleniumProject/config/WaitHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/szendzij/FirstSeleniumProject/pages/ContactUsPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/szendzij/FirstSeleniumProject/pages/HomePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/szendzij/FirstSeleniumProject/pages/LoginPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/szendzij/FirstSeleniumProject/pages/ShopingCartPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/FirstSeleniumProject.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/szendzij/FirstSeleniumProject/CalculatorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/selenium/BasicCsvReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/selenium/ContactUsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/selenium/InitialTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/selenium/LoginTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/selenium/ShopingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ShopingTest.asCustomerIWantToButTwoCasualDressesAndCheckoutACart">
+  <component name="RunManager" selected="JUnit.ContactUsTest.asCustomerIShallSendEmailWithSubject">
     <configuration name="CalculatorTest.simpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstSeleniumProject" />
       <extension name="coverage">
@@ -128,7 +102,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.asNotRegisteredCustomerIShallNotLogIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactUsTest.asCustomerIShallNotSendEmailWithoutSubject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstSeleniumProject" />
       <extension name="coverage">
         <pattern>
@@ -137,8 +111,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="selenium" />
-      <option name="MAIN_CLASS_NAME" value="selenium.LoginTest" />
-      <option name="METHOD_NAME" value="asNotRegisteredCustomerIShallNotLogIn" />
+      <option name="MAIN_CLASS_NAME" value="selenium.ContactUsTest" />
+      <option name="METHOD_NAME" value="asCustomerIShallNotSendEmailWithoutSubject" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactUsTest.asCustomerIShallSendEmailWithSubject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FirstSeleniumProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.ContactUsTest" />
+      <option name="METHOD_NAME" value="asCustomerIShallSendEmailWithSubject" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,27 +150,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="selenium in FirstSeleniumProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FirstSeleniumProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="selenium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="selenium" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ContactUsTest.asCustomerIShallSendEmailWithSubject" />
+        <item itemvalue="JUnit.ContactUsTest.asCustomerIShallNotSendEmailWithoutSubject" />
+        <item itemvalue="JUnit.ContactUsTest" />
         <item itemvalue="JUnit.ShopingTest.asCustomerIWantToButTwoCasualDressesAndCheckoutACart" />
         <item itemvalue="JUnit.CalculatorTest.simpleTest" />
-        <item itemvalue="JUnit.ContactUsTest" />
-        <item itemvalue="JUnit.selenium in FirstSeleniumProject" />
-        <item itemvalue="JUnit.LoginTest.asNotRegisteredCustomerIShallNotLogIn" />
       </list>
     </recent_temporary>
   </component>
